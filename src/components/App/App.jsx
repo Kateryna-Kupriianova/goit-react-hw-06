@@ -1,9 +1,3 @@
-
-
- 
- 
-
-import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { addContact, deleteContact, selectContacts } from '../../redux/contactsSlice';
 import { changeFilter, selectNameFilter } from '../../redux/filtersSlice';
@@ -16,9 +10,7 @@ const App = () => {
     const dispatch = useDispatch();
     const contacts = useSelector(selectContacts);
     const filterValue = useSelector(selectNameFilter);
-
-     
-
+  
     const handleAddContact = ({ name, number }) => {
         dispatch(addContact({ name, number }));
     };
